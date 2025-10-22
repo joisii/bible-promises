@@ -1,5 +1,6 @@
 // src/app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head"; // <-- import Head
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -13,6 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" /> {/* <-- your logo file */}
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
