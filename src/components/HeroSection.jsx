@@ -9,8 +9,7 @@ export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const verseRef = useRef(null);
   const glowRef = useRef(null);
-  const rotateRef = useRef(null); // Ref for the rotating symbol
-  const descRef = useRef(null); // Ref for the description animation
+  const descRef = useRef(null);
 
   // Load verses
   useEffect(() => {
@@ -20,23 +19,15 @@ export default function HeroSection() {
       .catch((err) => console.error(err));
   }, []);
 
-  // Function to dynamically adjust verse font size
-  const getFontSize = (text) => {
-    if (!text) return "text-base sm:text-lg md:text-xl lg:text-2xl";
-    if (text.length > 250) return "text-sm sm:text-base md:text-lg lg:text-xl";
-    if (text.length > 150) return "text-base sm:text-lg md:text-xl lg:text-2xl";
-    return "text-lg sm:text-xl md:text-2xl lg:text-3xl";
-  };
-
-  // Animate verses with fade + shimmer
+  // Animate verses
   useEffect(() => {
     if (verses.length === 0 || !verseRef.current) return;
 
     const showVerse = () => {
       gsap.fromTo(
         verseRef.current,
-        { opacity: 0, y: -15 },
-        { opacity: 1, y: 0, duration: 2, ease: "power2.out" }
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 1.5, ease: "power2.out" }
       );
 
       gsap.to(glowRef.current, {
@@ -45,16 +36,6 @@ export default function HeroSection() {
         ease: "linear",
         repeat: -1,
       });
-
-      // Adjust description scale slightly based on verse length
-      if (descRef.current) {
-        const newSize = verses[currentIndex].quote.length > 200 ? 0.95 : 1;
-        gsap.to(descRef.current, {
-          scale: newSize,
-          duration: 0.8,
-          ease: "power2.out",
-        });
-      }
     };
 
     showVerse();
@@ -62,123 +43,90 @@ export default function HeroSection() {
     const interval = setInterval(() => {
       gsap.to(verseRef.current, {
         opacity: 0,
-        y: -10,
-        duration: 1.5,
+        x: 50,
+        duration: 1,
         ease: "power2.inOut",
         onComplete: () => {
           setCurrentIndex((prev) => (prev + 1) % verses.length);
           showVerse();
         },
       });
-    }, 10000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [verses, currentIndex]);
 
-  // Infinite rotation for the sacred symbol
-  useEffect(() => {
-    if (rotateRef.current) {
-      gsap.to(rotateRef.current, {
-        rotation: 360,
-        duration: 8,
-        ease: "linear",
-        repeat: -1,
-        transformOrigin: "50% 50%",
-      });
-    }
-  }, []);
-
-  // Animate description on first load and add subtle breathe animation
+  // Description animation
   useEffect(() => {
     if (descRef.current) {
       gsap.fromTo(
         descRef.current,
-        { opacity: 0, y: 10, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.5, ease: "power2.out" }
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 2, ease: "power2.out", repeat: -1, yoyo: true }
       );
-
-      // Breathing animation
-      gsap.to(descRef.current, {
-        scale: 1.02,
-        duration: 3,
-        ease: "sine.inOut",
-        repeat: -1,
-        yoyo: true,
-      });
     }
   }, []);
 
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center 
-                 text-center px-4 sm:px-6 lg:px-12 
-                 bg-gradient-to-b from-yellow-50 to-yellow-100 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-12 bg-gradient-to-b from-yellow-50 to-yellow-100 overflow-hidden"
     >
-      {/* Verse Section slightly moved downward */}
+      {/* Verse Section */}
       {verses.length > 0 && (
         <div
           ref={verseRef}
           key={currentIndex}
-          className="absolute top-16 sm:top-20 md:top-24 lg:top-28 max-w-2xl px-4 text-center"
+          className="absolute top-16 sm:top-20 md:top-24 lg:top-28 max-w-full px-4 text-center"
         >
           <p
             ref={glowRef}
-            className={`${getFontSize(verses[currentIndex].quote)} 
-                       font-serif italic mb-1 leading-relaxed inline-block 
-                       bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600
-                       bg-clip-text text-transparent break-words 
-                       max-w-[90vw] sm:max-w-xl md:max-w-2xl mx-auto`}
-            style={{ backgroundSize: "200% auto" }}
+            className="font-serif italic mb-1 leading-relaxed inline-block bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 bg-clip-text text-transparent break-words mx-auto"
+            style={{ backgroundSize: "200% auto", fontSize: "clamp(1rem, 4vw, 2rem)" }}
           >
             “{verses[currentIndex].quote}”
           </p>
           <p className="text-xs sm:text-sm md:text-base text-amber-800 font-semibold">
-            — {verses[currentIndex].reference}
+         {verses[currentIndex].reference}
           </p>
         </div>
       )}
 
-      {/* Main Content Centered */}
-      <div className="flex flex-col items-center justify-center absolute inset-0 z-10">
+      {/* Main Content */}
+      <div className="flex flex-col items-center justify-center absolute inset-0 z-10 px-4 sm:px-6">
         <img
-          src="/logo.jpg"
+          src="/logo.png"
           alt="Bible Promises Logo"
-          className="w-14 h-14 sm:w-18 sm:h-18 lg:w-20 lg:h-20 
-                     rounded-full shadow-md border-2 border-yellow-500 mb-4"
+          className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full shadow-md mb-4"
           loading="lazy"
         />
 
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
-                     font-extrabold text-yellow-800 
-                     tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] 
-                     mb-5 flex items-center gap-2"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-800 tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] mb-5"
+          style={{ WebkitTextStroke: "1px #b45309" }}
         >
           BIBLE PR
-          <span ref={rotateRef} className="inline-block text-yellow-600">
+          <span
+            className="inline-block text-yellow-800"
+            style={{ fontSize: "inherit", fontWeight: "inherit", WebkitTextStroke: "1px #b45309", display: "inline-block", position: "relative", top: "0.05em" }}
+          >
             ㊉
           </span>
           MISES
         </h1>
 
-        {/* WhatsApp + Social Links Group */}
+        {/* WhatsApp + Social Links */}
         <div className="flex flex-col items-center gap-4 mt-2">
           <a
             href="https://whatsapp.com/channel/0029VaAMNQFBfxoFENoGeZ1q"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-700 text-white font-medium 
-                       px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-md 
-                       hover:bg-yellow-800 active:scale-95 
-                       transition-all duration-300 text-sm sm:text-base"
+            className="bg-yellow-700 text-white font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-md hover:bg-yellow-800 active:scale-95 transition-all duration-300 text-sm sm:text-base"
           >
             Join Our WhatsApp Channel
           </a>
 
-          {/* Optional subtle divider */}
-          <div className="h-[1px] w-24 bg-yellow-400 opacity-50 my-1"></div>
+          <div className="h-[1px] w-20 sm:w-24 bg-yellow-400 opacity-50 my-1"></div>
 
-          {/* Social label + icons stacked neatly */}
           <div className="flex flex-col items-center justify-center gap-2 text-gray-700">
             <span className="text-xs sm:text-sm md:text-base font-medium italic text-amber-800">
               Join our official social channels
@@ -187,12 +135,10 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Description about the Bible Promises group */}
+        {/* Description - responsive */}
         <div
           ref={descRef}
-          className="mt-6 max-w-2xl px-4 text-center 
-                     bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-500
-                     text-sm sm:text-base md:text-lg font-medium italic leading-relaxed drop-shadow-md origin-top"
+          className="mt-10 max-w-xl px-4 sm:px-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-amber-700 via-yellow-500 to-amber-500 text-sm sm:text-base md:text-lg font-medium italic leading-relaxed drop-shadow-md origin-top"
         >
           Dive into daily verses, uplifting reflections, and meaningful conversations. 
           Strengthen your faith, connect with believers, and be inspired every day.
@@ -200,11 +146,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Inspirational Text */}
-      <p
-        className="absolute bottom-14 sm:bottom-16 md:bottom-20 
-                   text-gray-700 text-sm sm:text-base md:text-lg italic 
-                   max-w-xl text-center px-6"
-      >
+      <p className="absolute bottom-14 sm:bottom-16 md:bottom-20 text-gray-700 text-sm sm:text-base md:text-lg italic max-w-xs sm:max-w-sm text-center px-4">
         “Let each promise remind you, you’re never walking alone.”
       </p>
     </section>

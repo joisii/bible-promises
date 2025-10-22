@@ -1,82 +1,56 @@
 [
-  {
-    "quote": "I can do all things through Christ who strengthens me.",
-    "reference": "Philippians 4:13"
-  },
-  {
-    "quote": "Trust in the Lord with all your heart and lean not on your own understanding.",
-    "reference": "Proverbs 3:5"
-  },
-  {
-    "quote": "The Lord is my shepherd; I shall not want.",
-    "reference": "Psalm 23:1"
-  },
-  {
-    "quote": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
-    "reference": "Jeremiah 29:11"
-  },
-  {
-    "quote": "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
-    "reference": "Joshua 1:9"
-  },
-  {
-    "quote": "Cast all your anxiety on him because he cares for you.",
-    "reference": "1 Peter 5:7"
-  },
-  {
-    "quote": "The Lord is my light and my salvation—whom shall I fear?",
-    "reference": "Psalm 27:1"
-  },
-  {
-    "quote": "Come to me, all you who are weary and burdened, and I will give you rest.",
-    "reference": "Matthew 11:28"
-  },
-  {
-    "quote": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.",
-    "reference": "Philippians 4:6"
-  },
-  {
-    "quote": "But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.",
-    "reference": "Isaiah 40:31"
-  },
-  {
-    "quote": "Love the Lord your God with all your heart and with all your soul and with all your mind.",
-    "reference": "Matthew 22:37"
-  },
-  {
-    "quote": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
-    "reference": "John 3:16"
-  },
-  {
-    "quote": "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.",
-    "reference": "John 14:27"
-  },
-  {
-    "quote": "The name of the Lord is a strong tower; the righteous run to it and are safe.",
-    "reference": "Proverbs 18:10"
-  },
-  {
-    "quote": "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!",
-    "reference": "2 Corinthians 5:17"
-  },
-  {
-    "quote": "Rejoice in the Lord always. I will say it again: Rejoice!",
-    "reference": "Philippians 4:4"
-  },
-  {
-    "quote": "Let all that you do be done in love.",
-    "reference": "1 Corinthians 16:14"
-  },
-  {
-    "quote": "The Lord is close to the brokenhearted and saves those who are crushed in spirit.",
-    "reference": "Psalm 34:18"
-  },
-  {
-    "quote": "Even though I walk through the darkest valley, I will fear no evil, for you are with me; your rod and your staff, they comfort me.",
-    "reference": "Psalm 23:4"
-  },
-  {
-    "quote": "Seek first his kingdom and his righteousness, and all these things will be given to you as well.",
-    "reference": "Matthew 6:33"
-  }
+  { "quote": "I can do all things through Christ.", "reference": "Philippians 4:13" },
+  { "quote": "The Lord is my shepherd.", "reference": "Psalm 23:1" },
+  { "quote": "Trust in the Lord with all your heart.", "reference": "Proverbs 3:5" },
+  { "quote": "Be strong and courageous.", "reference": "Joshua 1:9" },
+  { "quote": "Cast all your anxiety on Him.", "reference": "1 Peter 5:7" },
+  { "quote": "The Lord is my light and my salvation.", "reference": "Psalm 27:1" },
+  { "quote": "Come to me, all who are weary.", "reference": "Matthew 11:28" },
+  { "quote": "Do not be anxious about anything.", "reference": "Philippians 4:6" },
+  { "quote": "Those who hope in the Lord will renew their strength.", "reference": "Isaiah 40:31" },
+  { "quote": "Love the Lord your God with all your heart.", "reference": "Matthew 22:37" },
+  { "quote": "For God so loved the world.", "reference": "John 3:16" },
+  { "quote": "Peace I leave with you.", "reference": "John 14:27" },
+  { "quote": "The name of the Lord is a strong tower.", "reference": "Proverbs 18:10" },
+  { "quote": "If anyone is in Christ, the new has come.", "reference": "2 Corinthians 5:17" },
+  { "quote": "Rejoice in the Lord always.", "reference": "Philippians 4:4" },
+  { "quote": "Let all that you do be done in love.", "reference": "1 Corinthians 16:14" },
+  { "quote": "The Lord is close to the brokenhearted.", "reference": "Psalm 34:18" },
+  { "quote": "Even though I walk through the valley, I will fear no evil.", "reference": "Psalm 23:4" },
+  { "quote": "Seek first His kingdom.", "reference": "Matthew 6:33" },
+  { "quote": "Commit your work to the Lord.", "reference": "Proverbs 16:3" },
+  { "quote": "The Lord is good.", "reference": "Psalm 100:5" },
+  { "quote": "Do not worry about tomorrow.", "reference": "Matthew 6:34" },
+  { "quote": "I sought the Lord, and He answered me.", "reference": "Psalm 34:4" },
+  { "quote": "Blessed are the meek.", "reference": "Matthew 5:5" },
+  { "quote": "Let the peace of Christ rule in your hearts.", "reference": "Colossians 3:15" },
+  { "quote": "God is our refuge and strength.", "reference": "Psalm 46:1" },
+  { "quote": "Be still and know that I am God.", "reference": "Psalm 46:10" },
+  { "quote": "Taste and see that the Lord is good.", "reference": "Psalm 34:8" },
+  { "quote": "The Lord bless you and keep you.", "reference": "Numbers 6:24" },
+  { "quote": "He heals the brokenhearted.", "reference": "Psalm 147:3" },
+  { "quote": "Do everything in love.", "reference": "1 Corinthians 16:14" },
+  { "quote": "Give thanks in all circumstances.", "reference": "1 Thessalonians 5:18" },
+  { "quote": "Walk in wisdom toward outsiders.", "reference": "Colossians 4:5" },
+  { "quote": "Rejoice in hope. Be patient in tribulation.", "reference": "Romans 12:12" },
+  { "quote": "Bear one another’s burdens.", "reference": "Galatians 6:2" },
+  { "quote": "Do not be overcome by evil.", "reference": "Romans 12:21" },
+  { "quote": "The joy of the Lord is your strength.", "reference": "Nehemiah 8:10" },
+  { "quote": "My grace is sufficient for you.", "reference": "2 Corinthians 12:9" },
+  { "quote": "For the Spirit God gave us does not make us timid.", "reference": "2 Timothy 1:7" },
+  { "quote": "Do not let kindness and truth leave you.", "reference": "Proverbs 3:3" },
+  { "quote": "Delight yourself in the Lord.", "reference": "Psalm 37:4" },
+  { "quote": "I have hidden your word in my heart.", "reference": "Psalm 119:11" },
+  { "quote": "Your word is a lamp to my feet.", "reference": "Psalm 119:105" },
+  { "quote": "Let your light shine before others.", "reference": "Matthew 5:16" },
+  { "quote": "Trust in the Lord forever.", "reference": "Isaiah 26:4" },
+  { "quote": "Do not fear, for I am with you.", "reference": "Isaiah 41:10" },
+  { "quote": "Give thanks to the Lord, for He is good.", "reference": "Psalm 107:1" },
+  { "quote": "The Lord is righteous in all His ways.", "reference": "Psalm 145:17" },
+  { "quote": "I will instruct you and teach you.", "reference": "Psalm 32:8" },
+  { "quote": "The Lord is my strength and my shield.", "reference": "Psalm 28:7" },
+  { "quote": "Sing to the Lord a new song.", "reference": "Psalm 96:1" },
+  { "quote": "He gives strength to the weary.", "reference": "Isaiah 40:29" },
+  { "quote": "Commit your way to the Lord.", "reference": "Psalm 37:5" },
+  { "quote": "The Lord is compassionate and gracious.", "reference": "Psalm 103:8" }
 ]
