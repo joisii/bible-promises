@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
+/* === Root Variables === */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* === Inline Theme for Tailwind/Next.js Fonts === */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,6 +14,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* === Dark Mode Support === */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +22,39 @@
   }
 }
 
+/* === Base Styles === */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === Holy Floating Logo Animation === */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+  }
+  50% {
+    transform: translateY(-12px);
+    filter: drop-shadow(0 0 15px rgba(255, 223, 0, 0.8));
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* === Slow Spin for Loader Logo === */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
 }
