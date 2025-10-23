@@ -82,7 +82,6 @@ export default function HeroSection() {
         </div>
 
 {/* Title */}
-{/* Title */}
 <h1 className="group text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-800 tracking-[-0.02em] mb-1 leading-tight">
   BIBLE PR
   <span className="relative inline-block align-baseline mx-[1px] leading-none">
@@ -91,17 +90,17 @@ export default function HeroSection() {
       className="relative inline-block text-[1.02em] font-inherit"
       style={{
         display: "inline-block",
-        transform: "scaleX(1.08)", // increase horizontal width slightly
+        transform: "scaleX(1.08)", // widen the O a bit
       }}
     >
       O
     </span>
 
-    {/* Centered Cross */}
+    {/* Smaller centered Cross */}
     <span
       className="absolute top-1/2 left-1/2 text-amber-700 pulse-glow"
       style={{
-        fontSize: "clamp(10px, 0.45em, 22px)",
+        fontSize: "clamp(8px, 0.35em, 18px)", // smaller range
         transform: "translate(-52%, -58%)",
         pointerEvents: "none",
       }}
