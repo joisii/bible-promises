@@ -81,19 +81,17 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* Title */}
-        <h1 className="group text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-800 tracking-[-0.02em] mb-1 leading-tight">
-          BIBLE PR
-          <span className="relative inline-block align-baseline mx-[1px] leading-none top-[0.5px]">
-            <span className="inline-block relative text-[1.02em] font-inherit">O</span>
-            <span
-              className="absolute inset-0 flex items-center justify-center text-[0.44em] translate-y-[0.5px] text-amber-700 pulse-glow"
-            >
-              ♱
-            </span>
-          </span>
-          MISES
-        </h1>
+{/* Title */}
+<h1 className="group text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-800 tracking-[-0.02em] mb-1 leading-tight">
+  BIBLE PR
+  <span className="relative inline-block align-baseline mx-[1px] leading-none">
+    <span className="relative inline-block text-[1.02em] font-inherit">O</span>
+    <span className="absolute inset-0 flex items-center justify-center text-[0.45em] text-amber-700 pulse-glow">
+      ♱
+    </span>
+  </span>
+  MISES
+</h1>
 
         {/* Description */}
         <div className="mt-1 max-w-xl sm:max-w-2xl px-4 sm:px-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 text-sm sm:text-base md:text-lg font-semibold italic leading-snug drop-shadow-md">
