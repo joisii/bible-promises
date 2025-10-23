@@ -87,10 +87,11 @@ export default function HeroSection() {
   <span className="relative inline-block align-baseline mx-[1px] leading-none">
     <span className="relative inline-block text-[1.02em] font-inherit">O</span>
     <span
-      className="absolute inset-0 flex items-center justify-center text-amber-700 pulse-glow"
+      className="absolute top-1/2 left-1/2 text-amber-700 pulse-glow"
       style={{
         fontSize: "clamp(10px, 0.45em, 22px)",
-        transform: "translateX(-1px)", // shifts cross slightly to center horizontally
+        transform: "translate(-52%, -58%)", // <-- precise offset to center in 'O'
+        pointerEvents: "none",
       }}
     >
       ♱
