@@ -37,7 +37,8 @@ export default function SocialLinks() {
           title={link.label}
           className={`${link.bgColor} ${link.hoverColor} text-white w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 
                      flex items-center justify-center rounded-full shadow-lg transform transition-all duration-300 
-                     hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400`}
+                     hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400
+                     ${link.floatClass}`}
         >
           {link.icon}
         </a>
