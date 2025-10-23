@@ -82,15 +82,27 @@ export default function HeroSection() {
         </div>
 
 {/* Title */}
+{/* Title */}
 <h1 className="group text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-800 tracking-[-0.02em] mb-1 leading-tight">
   BIBLE PR
   <span className="relative inline-block align-baseline mx-[1px] leading-none">
-    <span className="relative inline-block text-[1.02em] font-inherit">O</span>
+    {/* Slightly wider O */}
+    <span
+      className="relative inline-block text-[1.02em] font-inherit"
+      style={{
+        display: "inline-block",
+        transform: "scaleX(1.08)", // increase horizontal width slightly
+      }}
+    >
+      O
+    </span>
+
+    {/* Centered Cross */}
     <span
       className="absolute top-1/2 left-1/2 text-amber-700 pulse-glow"
       style={{
         fontSize: "clamp(10px, 0.45em, 22px)",
-        transform: "translate(-52%, -58%)", // <-- precise offset to center in 'O'
+        transform: "translate(-52%, -58%)",
         pointerEvents: "none",
       }}
     >
@@ -99,6 +111,7 @@ export default function HeroSection() {
   </span>
   MISES
 </h1>
+
 
         {/* Description */}
         <div className="mt-1 max-w-xl sm:max-w-2xl px-4 sm:px-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 text-sm sm:text-base md:text-lg font-semibold italic leading-snug drop-shadow-md">
