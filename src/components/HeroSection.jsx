@@ -89,7 +89,8 @@ export default function HeroSection() {
     <span
       className="absolute inset-0 flex items-center justify-center text-amber-700 pulse-glow"
       style={{
-        fontSize: "clamp(10px, 0.45em, 22px)", // min 10px, scales slightly, max 22px
+        fontSize: "clamp(10px, 0.45em, 22px)",
+        transform: "translateX(-1px)", // shifts cross slightly to center horizontally
       }}
     >
       ♱
@@ -97,7 +98,6 @@ export default function HeroSection() {
   </span>
   MISES
 </h1>
-
 
         {/* Description */}
         <div className="mt-1 max-w-xl sm:max-w-2xl px-4 sm:px-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 text-sm sm:text-base md:text-lg font-semibold italic leading-snug drop-shadow-md">
