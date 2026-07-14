@@ -1,50 +1,93 @@
 "use client";
 
+import { FaPhoneAlt, FaHeart } from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 border-t border-yellow-600 shadow-md mt-0 overflow-hidden">
+    <footer className="relative overflow-hidden border-t border-yellow-300 bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-200">
 
-      {/* Glow Effect */}
-      <div className="absolute inset-0 bg-yellow-300 opacity-10 blur-2xl -z-10"></div>
+      {/* Background Glow */}
+      <div className="absolute -top-16 -left-16 h-56 w-56 rounded-full bg-yellow-300/20 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-amber-300/20 blur-3xl"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-col justify-center items-center gap-2 sm:gap-3">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-10">
 
-        {/* Bottom Inspirational Text - part of footer */}
-        <p className="text-yellow-900 text-sm sm:text-base md:text-lg italic max-w-xs sm:max-w-sm text-center mb-1">
-          “Let each promise remind you, you’re never walking alone.”
-        </p>
-
-        {/* Contact & Footer Info */}
-        <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-2 sm:gap-3">
-
-          {/* Contact Section */}
-          <div className="flex flex-col items-center sm:items-start text-gray-800 w-full sm:w-auto">
-            <h3 className="font-bold text-lg sm:text-xl mb-1 text-center sm:text-left">Contact Us</h3>
-
-            {/* Phone button */}
-            <a
-              href="tel:+919496678956"
-              className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-4 py-1.5 rounded-full shadow-sm transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base mt-1"
-            >
-              📞 +91 94966 78956
-            </a>
-
-            {/* Owner & tagline */}
-            <p className="mt-1 text-gray-900 italic text-center sm:text-left text-xs sm:text-sm">
-              Owner: Manoj V Munnar
+        {/* Inspirational Quote */}
+        <div className="mb-8 flex justify-center">
+          <div className="max-w-2xl rounded-2xl border border-yellow-200 bg-white/60 px-6 py-5 text-center shadow-lg backdrop-blur-md">
+            <p className="text-base italic leading-relaxed text-yellow-900 sm:text-lg">
+              “Let each promise remind you that you're never walking alone.”
             </p>
           </div>
-
-          {/* Inspirational Section */}
-          <div className="text-gray-900 text-center sm:text-right text-sm sm:text-base w-full sm:w-auto mt-1 sm:mt-0">
-            “Explore BIBLE PR㊉MISES daily and stay inspired.”
-          </div>
         </div>
+
+        {/* Main Footer */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+
+          {/* Contact */}
+          <div className="flex flex-col items-center md:items-start">
+
+            <h3 className="mb-4 text-2xl font-bold text-yellow-800">
+              Contact Us
+            </h3>
+
+            <a
+              href="tel:+919496678956"
+              aria-label="Call Bible Promises"
+              className="group inline-flex items-center gap-3 rounded-full bg-yellow-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-700 hover:shadow-xl active:scale-95"
+            >
+              <FaPhoneAlt className="transition-transform duration-300 group-hover:rotate-12" />
+
+              <span>+91 94966 78956</span>
+            </a>
+
+            <p className="mt-4 text-center text-sm italic text-gray-700 md:text-left">
+              Managed with faith by
+            </p>
+
+            <p className="font-semibold text-yellow-900">
+              Manoj V Munnar
+            </p>
+
+          </div>
+
+          {/* Right Side */}
+          <div className="flex flex-col items-center justify-center md:items-end">
+
+            <p className="max-w-md text-center text-base leading-relaxed text-gray-700 md:text-right">
+              Explore
+              <span className="font-bold text-yellow-800">
+                {" "}BIBLE PR㊉MISES{" "}
+              </span>
+              every day and strengthen your faith through God's Word,
+              encouragement, and hope.
+            </p>
+
+            <div className="mt-6 flex items-center gap-2 text-sm text-yellow-800">
+              <FaHeart className="text-red-500" />
+              <span>Made with faith for God's glory.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Divider */}
+        <div className="my-8 h-px w-full bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-900 text-xs sm:text-sm py-1.5 border-t border-yellow-600 mt-2">
-          © {new Date().getFullYear()} Bible Promises. All rights reserved.
+        <div className="flex flex-col items-center justify-between gap-2 text-center text-sm text-gray-700 md:flex-row">
+
+          <p>
+            © {new Date().getFullYear()} Bible Promises. All rights reserved.
+          </p>
+
+          <p className="italic text-yellow-800">
+            May God's peace be with you always.
+          </p>
+
         </div>
+
       </div>
     </footer>
   );
