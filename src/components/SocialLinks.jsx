@@ -1,28 +1,28 @@
 "use client";
 
 import {
+  FaFacebookF,
   FaWhatsapp,
   FaInstagram,
   FaYoutube,
-  FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
 
 export default function SocialLinks() {
   const socialLinks = [
     {
+      href: "https://www.facebook.com/share/1EXCCpZzGR/",
+      icon: FaFacebookF,
+      bgColor: "bg-blue-600",
+      hoverColor: "hover:bg-blue-700",
+      label: "Follow on Facebook",
+    },
+    {
       href: "https://www.whatsapp.com/channel/0029VaAMNQFBfxoFENoGeZ1q",
       icon: FaWhatsapp,
       bgColor: "bg-green-500",
       hoverColor: "hover:bg-green-600",
       label: "Join WhatsApp",
-    },
-    {
-      href: "https://youtube.com/@biblepromises-4k?si=2066NY3YMEXx_37D",
-      icon: FaYoutube,
-      bgColor: "bg-red-500",
-      hoverColor: "hover:bg-red-600",
-      label: "Subscribe on YouTube",
     },
     {
       href: "https://www.instagram.com/invites/contact/?i=xu4pr0czdhhl&utm_content=2nwpf61",
@@ -32,11 +32,11 @@ export default function SocialLinks() {
       label: "Follow on Instagram",
     },
     {
-      href: "https://www.facebook.com/share/1EXCCpZzGR/",
-      icon: FaFacebookF,
-      bgColor: "bg-blue-600",
-      hoverColor: "hover:bg-blue-700",
-      label: "Follow on Facebook",
+      href: "https://youtube.com/@biblepromises-4k?si=2066NY3YMEXx_37D",
+      icon: FaYoutube,
+      bgColor: "bg-red-500",
+      hoverColor: "hover:bg-red-600",
+      label: "Subscribe on YouTube",
     },
     {
       href: "https://x.com/Manojvmnr6",
