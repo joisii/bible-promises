@@ -32,7 +32,7 @@ export default function SocialLinks() {
       label: "Follow on Instagram",
     },
     {
-      href: "https://www.facebook.com/people/Bible-Promises",
+      href: "https://www.facebook.com/share/1EXCCpZzGR/",
       icon: FaFacebookF,
       bgColor: "bg-blue-600",
       hoverColor: "hover:bg-blue-700",
