@@ -19,14 +19,14 @@ export default function NotFound() {
 
         {/* Description */}
         <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-          The page you're looking for doesn't exist or may have been moved.
-          Don't worry—God's promises are always within reach.
+          The page you&apos;re looking for doesn&apos;t exist or may have been moved.
+          Don&apos;t worry—God&apos;s promises are always within reach.
         </p>
 
         {/* Bible Verse */}
         <div className="mt-8 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-6 border border-yellow-300">
           <p className="italic text-yellow-800 text-lg leading-relaxed">
-            "Your word is a lamp to my feet and a light to my path."
+            &quot;Your word is a lamp to my feet and a light to my path.&quot;
           </p>
 
           <p className="mt-2 font-semibold text-yellow-700">
@@ -44,7 +44,7 @@ export default function NotFound() {
 
         {/* Footer Text */}
         <p className="mt-8 text-sm text-gray-600 italic">
-          May God's Word continue to guide and encourage you every day.
+          May God&apos;s Word continue to guide and encourage you every day.
         </p>
 
       </div>
