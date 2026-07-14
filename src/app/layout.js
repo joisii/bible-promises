@@ -63,7 +63,7 @@ export const metadata = {
     title: "Bible Promises",
     description:
       "Daily Bible promises, scriptures, and encouragement to strengthen your faith.",
-    url: "https://your-domain.com", // Replace later
+    url: "https://biblepromises.vercel.app/", // Replace later
     siteName: "Bible Promises",
     locale: "en_US",
     type: "website",
